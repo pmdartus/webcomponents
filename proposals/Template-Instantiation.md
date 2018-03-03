@@ -134,7 +134,7 @@ In fact, since the same template syntax extensions (e.g., Handlebars template) t
 
 Each template type is associated with a **template process callback** (`TemplateProcessCallback`). A template process callback is invoked inside each call to `createInstance` of `HTMLTemplate`, and takes three arguments: the newly created template instance, a sequence of template parts, and the state object passed into `createInstance`.
 
-Each template part represents an occurrence of a mustache syntax in the template. When a mustache syntax appears as a text node, `NodeTemplatePart` is instantiated. If it appears within an attribute, `AttributeTemplatePart` is instantiated. Each template instance is associated with a template process callback used to create the instance. All subsequent calls to `update` invoke the same template process callback. Each template type is optionally associated with an **template create callback** (`TemplateCreateCallback`), which gets invoked when a template instance is initially constructed.
+Each template part represents an occurrence of a mustache syntax in the template. When a mustache syntax appears as a text node, `NodeTemplatePart` is instantiated. If it appears within an attribute, `AttributeTemplatePart` is instantiated. Each template instance is associated with a template process callback used to create the instance. All subsequent calls to `update` invoke the same template process callback. Each template type is optionally associated with an **template create callback** (`TemplateProcessCallback`), which gets invoked when a template instance is initially constructed.
 
 Consider, for example, the following template:
 
