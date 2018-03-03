@@ -277,7 +277,7 @@ However, this approach won't work for use case (9). To see why, suppose we had t
 </template>
 ```
 
-We can detect `{{foreach items}}` the same way we detect `{{if x}}`, but we there is exactly one template part object for `{{class}}`, `{{value}}`, and `{{label}}`, not per an element in items, and the browser engine doesn't have a way of ignoring out how many parts are needed unless we standardized the exact semantics foreach:
+We can detect `{{foreach items}}` the same way we detect `{{if x}}`, but there is exactly one template part object for `{{class}}`, `{{value}}`, and `{{label}}`, not per an element in items, and the browser engine doesn't have a way of ignoring out how many parts are needed unless we standardized the exact semantics foreach:
 
 ``` js
 document.defineTemplateType('with-for-each', { processCallback: (instance, parts, state) => {
